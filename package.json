@@ -1,0 +1,47 @@
+{
+  "name": "erp-automation-framework",
+  "version": "1.0.0",
+  "description": "ERP Enterprise Playwright Automation Framework",
+  "scripts": {
+    "test": "ts-node scripts/generate-allure-report.ts --run",
+    "test:allure": "ts-node scripts/generate-allure-report.ts --run",
+    "test:open": "ts-node scripts/generate-allure-report.ts --run --open",
+    "test:raw": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:chromium": "playwright test --project=chromium",
+    "test:api": "playwright test tests/api.spec.ts",
+    "codegen": "playwright codegen",
+    "report": "playwright show-report",
+    "report:allure": "ts-node scripts/generate-allure-report.ts",
+    "report:open": "allure open reports/allure/latest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing",
+    "e2e"
+  ],
+  "author": "Automation Engineer",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.13.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.5.2",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
